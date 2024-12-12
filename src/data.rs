@@ -29,9 +29,7 @@ pub fn init_database(db_path: &str) -> Connection {
     conn
 }
 
-pub fn addItem(conn: &mut Connection, item: &str) -> String {
+pub fn add_item(conn: &mut Connection, item: &str) -> String {
     let result = conn.execute("INSERT INTO tasks (item, done, added) VALUES (?1, ?2, DateTime('now'))", (item, false));
     String::from("todo")
 }
-
-pub fn getItems(ids: Vec<u64>) {}
