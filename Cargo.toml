@@ -2,7 +2,12 @@
 name = "todoapp"
 version = "0.1.0"
 edition = "2021"
+authors = ["coffeeknife <coffeeknife@proton.me>"]
+description = "A first Rust project implementing a simple todo app."
+repository = "https://github.com/coffeeknife/todoapp"
+readme = "README.md"
 
 [dependencies]
 rusqlite = { version = "0.32.1", features = ["bundled"] }
 clap = { version = "4.5.23", features = ["derive"] }
+chrono = "0.4.39"
