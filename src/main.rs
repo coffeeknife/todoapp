@@ -1,5 +1,7 @@
 use clap::{Parser, Subcommand};
 
+mod data;
+
 #[derive(Parser)]
 #[command(name = "TodoApp")]
 #[command(version, about, long_about = None)]
@@ -33,6 +35,7 @@ enum Commands {
 }
 
 fn main() {
+    data::init_database("./db.sqlite");
     let cli = Cli::parse();
     match &cli.command {
         Some(Commands::Add { items }) => {

@@ -1,0 +1,7 @@
+CREATE TABLE tasks(
+    id INTEGER NOT NULL AUTOINCREMENT PRIMARY KEY,
+    item TEXT NOT NULL,
+    done BOOLEAN NOT NULL,
+    added DATETIME NOT NULL,
+    completed DATETIME
+);
